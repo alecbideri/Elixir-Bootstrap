@@ -84,13 +84,17 @@ img{
   box-shadow: var(--box-shadow);
 }
 
-.navbar-nav .nav-link{
-  font-weight: 500;
-  color: var(--c-dark);
+.navbar .nav-link {
+  color: var(--c-dark) ;
+  transition: var(--transition);
 }
 
 .navbar-nav .nav-link.active{
   color: var(--c-brand);
+}
+
+.navbar .nav-link:hover {
+  color: var(--c-brand-light);
 }
 
 .btn {
@@ -155,7 +159,7 @@ img{
 }
 
 
-@media (min-width: 773px) and (max-width: 1020px) {
+@media (min-width: 768px) and (max-width: 1020px) {
   .col-md-6, .col-lg-5 {
     flex: 0 0 100%;
     max-width: 100%;
@@ -293,4 +297,51 @@ img{
 #contact .form-control:focus{
   border-color: var(--c-brand);
   box-shadow: none;
+}
+
+/* Footer */
+
+
+footer li, 
+footer p, 
+footer a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .line {
+  width: 40px;
+  height: 4px;
+  background-color: var(--c-brand);
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+/* Ensure equal column height */
+.footer-top .row {
+  align-items: stretch;
+}
+
+/* Social Icons */
+.footer-top div a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-top div a:hover {
+  color: var(--c-brand);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 0;
 }
